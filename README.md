@@ -36,6 +36,13 @@
 </match>
 ```
 
+Replace the following items:
+* email: the service account mail that apply from google console
+* private_key_path: the p12 key file full path that apply from google console
+* project: the google cloud project that you use
+* dataset: the BigQuery dataset you want to import data
+* table: the BigQuery table you want to import data
+
 ## Start the fluentd instance
 
 ```
@@ -59,4 +66,10 @@ docker run -v ~/data:/data -v ~/logs:/logs \
 ```
 # tail -f /var/log/td-agent/td-agent.log
 ```
+
+## Other references
+
+* BigQuery plugin for td-agent configure reference: https://github.com/kaizenplatform/fluent-plugin-bigquery#configuration
+* Google fluentd sample: https://github.com/GoogleCloudPlatform/bigquery-fluentd-docker-sample
+* Kaz's slide: https://speakerdeck.com/googlecloudjapan/mobairu-kpi-fen-xi-falsexin-biao-zhun-fluentd-plus-google-bigquery-number-gcpraibu-number-gcpja
 
